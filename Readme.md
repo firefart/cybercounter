@@ -4,7 +4,7 @@ Displays a website with a counter that is updated via websockets from the cybers
 
 Used to track the number of times cyber has been said during a talk and give live statistics.
 
-To install:
+## Install
 
 Replace `ENTER_IP` in `cyberclient.html` with actual server IP
 
