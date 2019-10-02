@@ -1,7 +1,15 @@
 # CYBER
 
-Replace ENTER_IP in `cyber.html` with actual server IP
+Replace `ENTER_IP` in `cyberclient.html` with actual server IP
 
-Host the html file and run `websocket.py`
+Host the html file on any webserver and run `cyberserver.py`
 
-pip install websocket
+To install:
+
+```bash
+virtualenv -p python3 env
+source env/bin/activate
+pip install websockets
+./cyberserver.py
+```
+
