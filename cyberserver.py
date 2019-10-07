@@ -26,6 +26,6 @@ async def count(websocket, path):
     await asyncio.sleep(0.1)
 
 loop = asyncio.get_event_loop()
-server = websockets.serve(count, "127.0.0.1", 8765)
+server = websockets.serve(count, "0.0.0.0", 8765)
 loop.run_until_complete(asyncio.gather(server, input_loop()))
 loop.run_forever()
