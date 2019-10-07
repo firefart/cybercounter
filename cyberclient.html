@@ -1,24 +1,23 @@
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
-  <style>
-    html { 
-      font-size: 500%;
-      font-weight: bold;
-      color: #7FFF00;
-      background-color: black;
-      font-family: 'VT323', monospace;      
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <style>
+      html { 
+        font-size: 500%;
+        font-weight: bold;
+        color: #7FFF00;
+        background-color: black;
+        font-family: 'VT323', monospace;      
+      }
+    </style>
+  <script>
+    let socket = new WebSocket("ws://ENTER_IP:8765/");
+    socket.onmessage = function(event) {
+      let message = event.data;
+      document.getElementById('counter').innerHTML = "Cybercounter: " + message;
     }
-  </style>
-<script>
-
-let socket = new WebSocket("ws://ENTER_IP:8765/");
-
-socket.onmessage = function(event) {
-  let message = event.data;
-  document.getElementById('counter').innerHTML = "Cybercounter: " + message;
-}
-</script>
+  </script>
 </head>
 <body>
   <div id="counter">Cybercounter: 0</div>

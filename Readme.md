@@ -14,6 +14,6 @@ Host the html file on any webserver and run `cyberserver.py`
 virtualenv -p python3 env
 source env/bin/activate
 pip install websockets
+pip install aioconsole
 ./cyberserver.py
 ```
-
